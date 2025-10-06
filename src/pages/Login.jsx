@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Auth.css';
+import nawasscoLogo from '../assets/nawascco.png';
 
 const Login = ({ onLogin }) => {
   const [formData, setFormData] = useState({
@@ -30,11 +31,7 @@ const Login = ({ onLogin }) => {
       <div className="auth-card">
         <div className="auth-header">
           <div className="logo">
-            <img 
-              src="./public/nawassco-logo.png" 
-              alt="NAWASSCO Logo" 
-              className="logo-image"
-            />
+          <img src={nawasscoLogo} alt="NAWASSCO Logo" className="logo-image" />
             <h2>NAWASSCO</h2>
           </div>
           <h3>Welcome Back</h3>

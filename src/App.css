@@ -240,3 +240,9 @@
     font-size: 24px;
   }
 }
+/* In the style tag in index.html or in App.css */
+.logo-image-loading {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}

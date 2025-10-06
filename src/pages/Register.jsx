@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import '../styles/Auth.css';
+import nawasscoLogo from '../assets/nawascco.png';
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -23,9 +24,18 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    // Basic validation
+    if (formData.password !== formData.confirmPassword) {
+      alert('Passwords do not match!');
+      return;
+    }
+
     // Simulate registration - in real app, this would be an API call
     console.log('Registration data:', formData);
+    
     // Auto-redirect to login after registration
+    alert('Registration successful! Please login.');
     navigate('/login');
   };
 
@@ -34,7 +44,7 @@ const Register = () => {
       <div className="auth-card">
         <div className="auth-header">
           <div className="logo">
-            <div className="logo-icon">NW</div>
+            <img src={nawasscoLogo} alt="NAWASSCO Logo" className="logo-image" />
             <h2>NAWASSCO</h2>
           </div>
           <h3>Create Account</h3>
