@@ -1,0 +1,22 @@
+{
+  "name": "NAWASSCO APP",
+  "short_name": "NAWASSCO",
+  "description": "Nakuru Water and Sanitation Company Application",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#87CEEB",
+  "theme_color": "#87CEEB",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/nawassco-logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/nawassco-logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #87CEEB 0%, #FFFFFF 100%);
+  min-height: 100vh;
+}
+
+.App {
+  min-height: 100vh;
+}
+
+/* Common button styles */
+.button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button-primary {
+  background-color: #87CEEB;
+  color: white;
+}
+
+.button-primary:hover {
+  background-color: #6CB4EE;
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.bold-link {
+  font-weight: bold;
+  text-decoration: none;
+  color: #87CEEB;
+}
+
+.bold-link:hover {
+  text-decoration: underline;
+}

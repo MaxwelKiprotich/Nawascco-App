@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./public/nawascco.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NAWASSCO APP - Nakuru Water and Sanitation Company</title>
+    <meta name="description" content="NAWASSCO - Manage your water account, view bills, make payments, and access company services">
+    <meta name="theme-color" content="#87CEEB">
+    
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- CSS for loading state -->
+    <style>
+      /* Loading animation */
+      .app-loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(135deg, #87CEEB 0%, #FFFFFF 100%);
+        flex-direction: column;
+        gap: 20px;
+      }
+      
+      .loading-spinner {
+        width: 50px;
+        height: 50px;
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #87CEEB;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      .loading-text {
+        color: #333;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+      }
+      
+      .logo-loading {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 20px;
+      }
+      
+      .logo-icon-loading {
+        width: 50px;
+        height: 50px;
+        background: #87CEEB;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 18px;
+      }
+      
+      .logo-text-loading {
+        color: #87CEEB;
+        font-size: 24px;
+        font-weight: bold;
+      }
+      
+      /* Hide the app until React loads */
+      #root:empty + .app-loading {
+        display: flex;
+      }
+      
+      #root:not(:empty) + .app-loading {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    
+    <!-- Loading screen -->
+    <div class="app-loading">
+      <div class="logo-loading">
+        <div class="logo-icon-loading">NW</div>
+        <div class="logo-text-loading">NAWASSCO</div>
+      </div>
+      <div class="loading-spinner"></div>
+      <div class="loading-text">Loading NAWASSCO App...</div>
+    </div>
+
+    <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- PWA manifest (optional) -->
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- iOS meta tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="NAWASSCO">
+    <link rel="apple-touch-icon" href="/nawassco-logo.png">
+    
+    <!-- Viewport and mobile optimization -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    
+    <!-- Prevent phone number detection -->
+    <meta name="format-detection" content="telephone=no">
+  </body>
+</html>
